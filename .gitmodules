@@ -3,3 +3,7 @@
 	url = /home/bpinsard/projects/rrg-pbellec/datasets/cneuromod_processed/fmriprep/retinotopy/../../smriprep/
 	datalad-id = f3ef9683-0a58-4d2b-b4eb-d33d8fc3fd2b
 	datalad-url = ../../smriprep/
+[submodule "sourcedata/retinotopy"]
+	path = sourcedata/retinotopy
+	url = /project/rrg-pbellec/ria-beluga/alias/cneuromod_raw/retinotopy
+	datalad-id = df96e39c-55e0-4862-a5c4-66145afcff6a
