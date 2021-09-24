@@ -9,7 +9,7 @@
 #SBATCH --mail-type=BEGIN
 #SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=None
+#SBATCH --mail-user=basile.pinsard@gmail.com
  
 set -e -u -x
 
@@ -19,8 +19,8 @@ export SINGULARITYENV_TEMPLATEFLOW_HOME="sourcedata/templateflow/"
 export LOCAL_DATASET=$SLURM_TMPDIR/$SLURM_JOB_NAME/
 flock --verbose /lustre03/project/6003287/datasets/cneuromod_processed/fmriprep/retinotopy/.datalad_lock datalad clone /lustre03/project/6003287/datasets/cneuromod_processed/fmriprep/retinotopy $LOCAL_DATASET
 cd $LOCAL_DATASET
-datalad get -s origin -n -r -R1 . # get sourcedata/*
-datalad get -s origin -r sourcedata/templateflow/tpl-{MNI152NLin2009cAsym,OASIS30ANTs,fsLR,fsaverage,MNI152NLin6Asym}
+datalad get -n -r -R1 . # get sourcedata/*
+datalad get -s ria-beluga -r sourcedata/templateflow/tpl-{MNI152NLin2009cAsym,OASIS30ANTs,fsLR,fsaverage,MNI152NLin6Asym}
 if [ -d sourcedata/smriprep ] ; then
     datalad get -n sourcedata/smriprep sourcedata/smriprep/sourcedata/freesurfer
 fi
