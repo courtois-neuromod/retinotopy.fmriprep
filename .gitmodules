@@ -10,9 +10,9 @@
 	datalad-url = "ria+file:///project/rrg-pbellec/ria-beluga#~cneuromod_raw/retinotopy"
 [submodule "containers"]
 	path = containers
-	url = /home/bpinsard/projects/rrg-pbellec/datasets/cneuromod_processed/fmriprep/retinotopy/../harrypotter/containers/
+	url = /project/rrg-pbellec/ria-beluga/alias/repronim/containers
 	datalad-id = b02e63c2-62c1-11e9-82b0-52540040489c
-	datalad-url = ../harrypotter/containers/
+	datalad-url = "ria+file:///project/rrg-pbellec/ria-beluga#~repronim/containers"
 [submodule "sourcedata/templateflow"]
 	path = sourcedata/templateflow
 	url = /project/rrg-pbellec/ria-beluga/alias/templateflow
