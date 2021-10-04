@@ -38,6 +38,6 @@ flock --verbose /lustre03/project/6003287/datasets/cneuromod_processed/fmriprep/
 if [ -d sourcedata/freesurfer] ; then
     flock --verbose /lustre03/project/6003287/datasets/cneuromod_processed/fmriprep/retinotopy/.datalad_lock datalad push -d sourcedata/freesurfer $LOCAL_DATASET --to origin
 fi 
-cp $SLURM_TMPDIR/fmriprep_study-retinotopy_sub-03_ses-003/resource_monitor.json /scratch/bpinsard/fmriprep_study-retinotopy_sub-03_ses-003_resource_monitor.json 
-if [ $fmriprep_exitcode -ne 0 ] ; then cp -R $SLURM_TMPDIR/fmriprep_study-retinotopy_sub-03_ses-003 /scratch/bpinsard/fmriprep_study-retinotopy_sub-03_ses-003 ; fi 
+if [ -e $LOCAL_DATASET/resource_monitor.json ] ; cp $LOCAL_DATASET/resource_monitor.json /scratch/bpinsard/fmriprep_study-retinotopy_sub-03_ses-003_resource_monitor.json 
+if [ $fmriprep_exitcode -ne 0 ] ; then cp -R $LOCAL_DATASET /scratch/bpinsard/fmriprep_study-retinotopy_sub-03_ses-003 ; fi 
 exit $fmriprep_exitcode 
