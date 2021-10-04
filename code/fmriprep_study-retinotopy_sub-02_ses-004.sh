@@ -16,7 +16,7 @@ set -e -u -x
 export SINGULARITYENV_TEMPLATEFLOW_HOME="sourcedata/templateflow/"
 
 
-export LOCAL_DATASET=$SLURM_TMPDIR/${SLURM_JOB_NAME/-/}/
+export LOCAL_DATASET=$SLURM_TMPDIR/${SLURM_JOB_NAME//-/}/
 flock --verbose /lustre03/project/6003287/datasets/cneuromod_processed/fmriprep/retinotopy/.datalad_lock datalad clone /lustre03/project/6003287/datasets/cneuromod_processed/fmriprep/retinotopy $LOCAL_DATASET
 cd $LOCAL_DATASET
 datalad get -n -r -R1 . # get sourcedata/*
