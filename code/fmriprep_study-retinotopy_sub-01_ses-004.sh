@@ -35,7 +35,7 @@ datalad containers-run -m 'fMRIPrep_sub-01_ses-004' -n containers/bids-fmriprep 
 fmriprep_exitcode=$?
 
 flock --verbose /lustre03/project/6003287/datasets/cneuromod_processed/fmriprep/retinotopy/.datalad_lock datalad push -d ./ --to origin
-if [ -d sourcedata/freesurfer] ; then
+if [ -d sourcedata/freesurfer ] ; then
     flock --verbose /lustre03/project/6003287/datasets/cneuromod_processed/fmriprep/retinotopy/.datalad_lock datalad push -d sourcedata/freesurfer $LOCAL_DATASET --to origin
 fi 
 if [ -e $LOCAL_DATASET/resource_monitor.json ] ; cp $LOCAL_DATASET/resource_monitor.json /scratch/bpinsard/fmriprep_study-retinotopy_sub-01_ses-004_resource_monitor.json 
