@@ -14,7 +14,7 @@ Anatomical preprocessing was reused from previously existing derivative objects.
 
 Functional data preprocessing
 
-: For each of the 3 BOLD runs found per subject (across all
+: For each of the 1 BOLD runs found per subject (across all
 tasks and sessions), the following preprocessing was performed.
 First, a reference volume and its skull-stripped version were generated
 by aligning and averaging
@@ -32,7 +32,7 @@ Head-motion parameters with respect to the BOLD reference
 (transformation matrices, and six corresponding rotation and translation
 parameters) are estimated before any spatiotemporal filtering using
 `mcflirt` [FSL 5.0.9, @mcflirt].
-BOLD runs were slice-time corrected to 0.686s (0.5 of slice acquisition range
+BOLD runs were slice-time corrected to 0.685s (0.5 of slice acquisition range
 0s-1.37s) using `3dTshift` from AFNI 20160207 [@afni, RRID:SCR_005927].
 First, a reference volume and its skull-stripped version were generated
  using a custom
