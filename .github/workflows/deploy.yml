@@ -1,7 +1,7 @@
 name: Test deploy
 on:
   push:
-    branches: [ main, git-annex, tests]
+    branches: [ main, git-annex, tests, with_slicetiming]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
